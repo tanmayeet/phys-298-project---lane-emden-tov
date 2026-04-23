@@ -64,7 +64,7 @@ for n, color in zip(indices, colors):
 
 plt.title("Cumulative Mass vs. Dimensionless Radius (Lane-Emden)")
 plt.xlabel(r"Dimensionless Radius ($\xi$)")
-plt.ylabel(r"Dimensionless Mass ($m(\xi)$)")
+plt.ylabel(r"Cumulative Mass ($m(\xi)$)")
 plt.xlim(0, 8)
 plt.ylim(0)
 plt.legend()
