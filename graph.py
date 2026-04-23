@@ -56,3 +56,18 @@ plt.savefig(filepath, dpi=300, bbox_inches="tight")
 plt.show()
 
 ## -- TODO: Radius vs. Mass Graph --
+for n, color in zip(indices, colors):
+    x_vals, u, dudx, x_end, real_surface = le.solver(n)
+    mass_profile = -x_vals**2 * dudx
+    plt.plot(x_vals, mass_profile, label=f"n = {n}", linewidth = 2)
+
+
+plt.title("Cumulative Density vs. Dimensionless Radius (Lane-Emden)")
+plt.xlabel(r"Dimensionless Radius ($\xi$)")
+plt.ylabel(r"Dimensionless Mass ($m(\xi)$)")
+plt.xlim(0, 8)
+plt.ylim(0)
+plt.legend()
+filepath = os.path.join(output_folder, "mass_vs_radius.png")
+plt.savefig(filepath, dpi=300, bbox_inches="tight")
+plt.show()
