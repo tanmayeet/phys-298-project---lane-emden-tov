@@ -62,7 +62,7 @@ for n, color in zip(indices, colors):
     plt.plot(x_vals, mass_profile, label=f"n = {n}", linewidth = 2)
 
 
-plt.title("Cumulative Density vs. Dimensionless Radius (Lane-Emden)")
+plt.title("Cumulative Mass vs. Dimensionless Radius (Lane-Emden)")
 plt.xlabel(r"Dimensionless Radius ($\xi$)")
 plt.ylabel(r"Dimensionless Mass ($m(\xi)$)")
 plt.xlim(0, 8)
